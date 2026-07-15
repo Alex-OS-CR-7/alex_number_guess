@@ -29,10 +29,10 @@ def is_valid_num(user_num_input):
 curcle_input_flag = True
 user_try_counter = 0
 
-while curcle_input_flag == True:
+while curcle_input_flag:
     user_num_input = input(f"Введите число от 1 до {max_border}:")
     user_try_counter += 1
-    if is_valid_num(user_num_input) == True:
+    if is_valid_num(user_num_input):
         n = int(user_num_input)
         if n == programm_random_num:
             print(
@@ -61,6 +61,6 @@ while curcle_input_flag == True:
             print('Ваше числе меньше загаднного, попробуйте еще разок!')
         elif n > programm_random_num:
             print('Ваше число больше загаданного, попробуйте еще разок!')
-    elif is_valid_num(user_num_input) == False:
+    elif not is_valid_num(user_num_input):
         print('А может быть все-таки введем целое число?')
         continue
